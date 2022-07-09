@@ -1,0 +1,301 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "style-variables.scss";
+
+@font-face {
+    font-family: 'FaktSoft';
+
+    src: url('assets/FaktSoft-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'sf pro text';
+
+    src: url('assets/sfprotext.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .post-title{
+    color: rgb(0, 0, 122) !important;
+  }
+
+
+  .one-line-overflow{
+    display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+  }
+
+  .two-lines-overflow{
+    display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+  }
+
+
+
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(213, 230, 236);
+  }
+
+*, *:before, *:after{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+
+  }
+  .blue-btn{
+    padding: 6px;
+    background-color: royalblue;
+    border: 1px solid #eee;
+    color: #eee;
+    border-radius: 5px;
+  }
+
+*{
+    font-family: 'sf pro text', 'FaktSoft';
+}
+
+.ng-select.custom {
+  width: 100%;
+}
+
+
+
+.caro{
+    z-index: 0;
+}
+
+
+  html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
+  height: 100%;
+  width: 100vw;
+  }
+
+
+
+@media (min-width: 768px){
+  body::-webkit-scrollbar{
+    width: 16px;
+    margin: 0 30px;
+    background-color: #101010;
+  }
+
+  body::-webkit-scrollbar-track{
+    width: 10px;
+  }
+
+  body::-webkit-scrollbar-thumb{
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #AAAAAA;
+  }
+}
+
+.side-menu::-webkit-scrollbar{
+  width: 16px;
+  margin: 0 30px;
+  background-color: #101010;
+}
+
+.side-menu::-webkit-scrollbar-track{
+  width: 10px;
+}
+
+.side-menu::-webkit-scrollbar-thumb{
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #AAAAAA;
+}
+
+
+.chats::-webkit-scrollbar{
+  width: 16px;
+  margin: 0 30px;
+  background-color: #8f8f8f;
+}
+
+.chats::-webkit-scrollbar-track{
+  width: 10px;
+}
+
+.chats::-webkit-scrollbar-thumb{
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #AAAAAA;
+}
+
+
+.is-invalid > .angular-editor > .angular-editor-wrapper > .angular-editor-textarea{
+  border: 1px solid red !important;
+}
+
+input[type=checkbox] + label {
+  display: block;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+
+input[type=checkbox] {
+  display: none;
+  appearance: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1.6em;
+  height: 1.6em;
+  padding-left: 0.35em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: $textbox-border-blue;
+  border-color: $textbox-border-blue;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #F7C28F;
+  border-color: #F7C28F;
+}
+
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+// Animate the size, outside
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(#fff,0);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
+// Stack multiple shadows, one from the left, the other from the right
+.close:hover,
+.close:focus {
+  box-shadow:
+    inset -3.5em 0 0 0 var(--hover),
+    inset 3.5em 0 0 0 var(--hover);
+}
+
+// Size can also be negative; see how it's smaller than the element
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+// Animating from the bottom
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+// And from the left
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+// Multiple shadows, one on the outside, another on the inside
+.offset {
+  box-shadow:
+    0.3em 0.3em 0 0 var(--color),
+    inset 0.3em 0.3em 0 0 var(--color);
+
+  &:hover,
+  &:focus {
+    box-shadow:
+      0 0 0 0 var(--hover),
+      inset 6em 3.5em 0 0 var(--hover);
+  }
+}
+
+//=== Set button colors
+// If you wonder why use Sass vars or CSS custom properties...
+  // Make a map with the class names and matching colors
+$colors: (
+  fill: #835eff,
+  pulse: #ef6eae,
+  close: #ff7f82,
+  raise: #ffa260,
+  up: #e4cb58,
+  slide: #8fc866,
+  offset: #19bc8b
+);
+
+// Sass variables compile to a static string; CSS variables are dynamic and inherited
+  // Loop through the map and set CSS custom properties using Sass variables
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}
+
+// Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
+button.fill, button.pulse {
+  color: var(--color);
+  transition: 0.25s;
+  border-radius: 2px;
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: #fff;
+  }
+}
+
+
+// Basic button styles
+button.fill, button.pulse {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+.alignfull > img {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,17 @@
+<ngx-spinner type="ball-clip-rotate-pulse" bdColor="rgba(1,1,1,0.7)" size="medium"  [fullScreen]="false"></ngx-spinner>
+
+<h3 class="search-title">Welcome to our world</h3>
+<div class="posts">
+  <div class="post" *ngFor="let post of posts" [routerLink]="['post', post.slug]" [queryParams]="{id: post.id}">
+    <div class="inner-flex-main-container">
+    <div class="left-flex-wrapper">
+    <h3 class="post-title" [innerHtml]="post.title.rendered"></h3>
+    <h3 class="post-date">{{ post.date | date: 'longDate' }}</h3>
+    <p class="post-body" [innerHtml]="post.content.rendered"></p>
+  </div>
+    <img [src]="getImgLinkFromId(post.featured_media)" alt="" class="post-img">
+  </div>
+  </div>
+
+</div>
+

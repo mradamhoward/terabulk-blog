@@ -1,0 +1,9 @@
+
+<ngx-spinner type="ball-clip-rotate-pulse" bdColor="rgba(1,1,1,0.7)" size="medium"  [fullScreen]="false"></ngx-spinner>
+<div class="post-container" *ngIf="post">
+  <h4 class="post-title" [innerHtml]="post.title.rendered"> </h4>
+  <img [src]="getImgLinkFromId(post.featured_media)"  alt="" class="post-img">
+  <div class="post" [innerHtml]="post.content.rendered">
+
+  </div>
+</div>

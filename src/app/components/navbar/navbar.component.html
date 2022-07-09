@@ -1,0 +1,45 @@
+<nav>
+  <div class="bubble-on-click-side" *ngIf="bubbleSideMenu"> </div>
+    <div class="left-menu"  *ngIf="!showSearch"> <a  (click)="openMenuClicked(); bubbleSideMenuTrigger()" class="menu"><i  class="fal fa-bars"></i></a>
+      <img (click)="goHome()" src="assets/sendcrate.png" alt="" class="brand-logo">
+      <a routerLink="/" class="brand">TeraBulk Blog</a></div>
+
+    <div class="search-container" [ngClass]="showSearch ? 'show-search' : 'hide-search'" >
+        <input type="text" i18n-placeholder  placeholder="Search for posts" class="search-bar" [(ngModel)]="searchQuery" (keyup.Enter)="search()" >
+        <i class="fal fa-times closeSearch" *ngIf="showSearch" (click)="toggleShowSearch()"></i>
+        <button class="searchButton" (click)="search()"><i class="fal fa-search resize-search-icon"></i></button>
+
+    </div>
+    <div class="right"></div>
+    <ul class="nav-links"  *ngIf="!showSearch">
+        <li><a  class="nav-link search-icon" (click)="toggleShowSearch()" ><i class="fal fa-search "></i></a></li>
+
+        <div class="cart-wrapper" >
+        <div class="bubble-on-click-cart" *ngIf="bubbleCart"> </div>
+
+
+      </div>
+      </ul>
+
+</nav>
+
+<div class="notifications-menu" *ngIf="showNotifications" #notificationsRef>
+  <ul class="notifications">
+    <li class="notification" *ngFor="let notification of notificationsList">
+      <a class="notification-link">{{ notification.message }}</a>
+    </li>
+  </ul>
+</div>
+
+
+
+<div class="side-menu" *ngIf="openMenu" myOffClick (offClick)="openMenu = false">
+    <ul class="side-menu-items">
+        <li class="side-menu-item" (click)="openMenu = false" *ngFor="let category of categories" [routerLink]="['/category', category.slug]"  [queryParams]="{id:category.id}"><a  class="side-menu-link" >{{category.name}}</a></li>
+    </ul>
+
+
+
+</div>
+
+<div class="nav-space-filler"></div>

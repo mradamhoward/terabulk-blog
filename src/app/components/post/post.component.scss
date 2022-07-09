@@ -1,0 +1,35 @@
+.post-container{
+  width: 1000px;
+  display: block;
+  margin: 10px auto;
+  background-color:aliceblue ;
+  border: 1px solid #ccc;
+}
+.post-title{
+  display: block;
+  text-align: center;
+  padding: 50px 0;
+  width: 100%;
+  font-size: 24pt;
+}
+
+@media screen  and (max-width: 1000px) {
+  .post-container{
+    width: 90% !important;
+  }
+
+  .post-img{
+    height: 130px;
+  }
+
+}
+
+
+
+.post-img{
+  width: 100%;
+}
+
+.post{
+  padding: 10px;
+}

@@ -4,8 +4,8 @@ export class AppConstants {
 
  public static API_BASE_URL = "http://localhost:8089/";
   public static API_BASE_URL_CHAT = "http://localhost:8092/";
-  public static WP_URL = "http://localhost/wordpress/wp-json/";
-  //public static WP_URL = "https://terabulkapi.000webhostapp.com/wp-json/";
+  //public static WP_URL = "http://localhost/wordpress/wp-json/";
+  public static WP_URL = "https://terabulk-blog-83c965.ingress-baronn.ewp.live/wp-json/";
   //public static API_BASE_URL =  "https://tb3-ubuyjnwxla-nw.a.run.app/"
   //public static API_BASE_URL = "https://spring-boot-security-jwt-auth-mongodb-ubuyjnwxla-ew.a.run.app/"
   private static OAUTH2_URL = AppConstants.API_BASE_URL + "oauth2/authorization/";

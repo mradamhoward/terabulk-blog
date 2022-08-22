@@ -1,8 +1,8 @@
 <nav>
   <div class="bubble-on-click-side" *ngIf="bubbleSideMenu"> </div>
     <div class="left-menu"  *ngIf="!showSearch"> <a  (click)="openMenuClicked(); bubbleSideMenuTrigger()" class="menu"><i  class="fal fa-bars"></i></a>
-      <img (click)="goHome()" src="assets/sendcrate.png" alt="" class="brand-logo">
-      <a routerLink="/" class="brand">TeraBulk Blog</a></div>
+
+      <a routerLink="/" class="brand">MajorBulk Blog</a></div>
 
     <div class="search-container" [ngClass]="showSearch ? 'show-search' : 'hide-search'" >
         <input type="text" i18n-placeholder  placeholder="Search for posts" class="search-bar" [(ngModel)]="searchQuery" (keyup.Enter)="search()" >

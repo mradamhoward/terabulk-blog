@@ -15,7 +15,7 @@ export class PostsComponent implements OnInit {
   constructor(private spinner:NgxSpinnerService, private title: Title, private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.title.setTitle('Home - TeraBulk Blog ')
+    this.title.setTitle('Home - MajorBulk Blog ')
     this.spinner.show()
     this.http.get<any[]>(AppConstants.WP_URL + 'wp/v2/posts').subscribe(posts => {
       this.posts = posts

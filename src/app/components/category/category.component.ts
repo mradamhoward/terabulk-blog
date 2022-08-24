@@ -27,7 +27,7 @@ export class CategoryComponent implements OnInit {
       this.category = cat
       console.log(cat);
 
-      this.title.setTitle(this.category.name + ' - MajorBulk Blog')
+      this.title.setTitle(this.category.name + ' - FireBulk Blog')
     })
 
     this.http.get<any[]>(AppConstants.WP_URL + 'wp/v2/posts/?categories=' + this.slug).subscribe(posts => {

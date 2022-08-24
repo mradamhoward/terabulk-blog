@@ -24,7 +24,7 @@ export class PostComponent implements OnInit {
       this.http.get<any>(AppConstants.WP_URL + 'wp/v2/posts/' + id).subscribe(post => {
         this.post = post;
         console.log(post)
-        this.title.setTitle(this.post.title.rendered  + ' - MajorBulk Blog')
+        this.title.setTitle(this.post.title.rendered  + ' - FireBulk Blog')
         this.getImgUrlMedia()
         this.spinner.hide()
       })

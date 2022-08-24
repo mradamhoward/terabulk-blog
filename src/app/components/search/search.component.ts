@@ -31,7 +31,7 @@ export class SearchComponent implements OnInit {
       this.ids = []
       this.results = []
       this.query = params['q']
-      this.title.setTitle(this.query + ' - MajorBulk Blog')
+      this.title.setTitle(this.query + ' - FireBulk Blog')
       setTimeout(() => {
         this.titleElement.nativeElement.scrollIntoView({behaviour: 'smooth', block: 'center'})
       }, 1000)

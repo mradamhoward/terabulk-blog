@@ -75,6 +75,6 @@ export class FooterComponent implements OnInit {
 
   }
   gohome(){
-    window.location.href = 'https://majorbulk.com'
+    window.location.href = 'https://firebulk.com'
   }
 }
